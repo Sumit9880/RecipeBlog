@@ -1,0 +1,224 @@
+:root {
+  --bs-font-sans-serif: 'Rubik', sans-serif;
+}
+
+.container-xxl {
+  max-width: 1530px;
+}
+
+body {
+  background-image: url("/img/i-like-food.svg");
+  background-color: rgb(243, 243, 243);
+}
+
+a {
+  color: var(--bs-dark);
+}
+
+/* Category Card */
+.category__link {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  transition: 250ms all;
+}
+
+.delete_link {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  transition: 250ms all;
+  border-radius: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.c_name {
+  text-align: left;
+  max-width: fit-content;
+}
+
+.del {
+  background-color: red;
+  color: white;
+}
+
+.up {
+  background-color: green;
+  color: white;
+}
+
+.category__link:hover {
+  transform: scale(1.1);
+}
+
+.category__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-bottom: 10px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.category__img--large {
+  height: 330px;
+}
+
+.category__img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.margin {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  margin-right: 30Px;
+}
+
+/* notification */
+.popup-notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  display: none;
+  text-align: center;
+}
+
+.popup-notification h3 {
+  margin-top: 0;
+}
+
+.popup-notification p {
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.notification-btn {
+  background-color: #008CBA;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.notification-btn:focus+.popup-notification {
+  display: block;
+}
+
+.border {
+  border: black;
+  border-radius: 15px;
+  text-align: center;
+  border-width: 3px !important;
+}
+
+.marginLike {
+  margin-left: 30px;
+  margin-right: 30Px;
+}
+.marginprof {
+  margin-left: 20px;
+  margin-right: 20Px;
+}
+
+.container {
+  width: 700px;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.complete {
+  height: 78vh;
+  padding-top: 5%;
+  align-items: center;
+}
+
+.actionCenter {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.actionCenterLkSh {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 25px;
+  align-items: center;
+}
+
+.commentsCenter {
+  border: black;
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  border-width: 2px;
+  padding: 10px;
+}
+.timesize{
+  font-size: small;
+}
+
+.nameMargin{
+  margin-top: 5px;
+}
+.nameColor{
+  color: #008CBA;
+}
+
+.commentPadding{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.commentImage{
+  border-radius: 50% !important;
+  /* height:40px; */
+  width: 30px !important;
+  margin-bottom: 15px;
+}
+
+.my-input {
+  display: block;
+  visibility:hidden;
+  opacity: 0;
+}
+
+.share-page{
+  height: 62vh;
+  align-items: center;
+}
+.share-container{
+  width: 600px;
+  height: 500px;
+  border: black;
+  border-radius: 15px;
+  text-align: center;
+  border-width: 3px !important;
+}
+
+.share-input {
+ width: 400px;
+ height: 40px;
+ border-radius: 10px;
+ border-width: 2px !important;
+}

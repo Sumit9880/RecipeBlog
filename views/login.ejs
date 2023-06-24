@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <div class="complete">
+    <% if(typeof message !=='undefined' ){ %>
+      <h4 class="resCenter" style="color: green;">
+        <%=message %>
+      </h4>
+      <% } %>
+        <br>
+        <div class="container">
+          <h1>Log In</h1>
+          <form action="/login" method="post">
+            <label for="username">Username:</label>
+            <input type="text" name="email" required placeholder="Enter your Email">
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" required placeholder="Password">
+            <br>
+            <br>
+            <div class="resLeft">
+            <a class="btn btn-outline-secondary" href="/sign">  SignUp  </a> <input class="btn btn-info" type="submit" value="  Log In  ">
+          </div>
+          </form>
+          <br>
+        </div>
+  </div>
+</body>
+
+</html>

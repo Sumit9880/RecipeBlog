@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <main>
+    <div class="complete">
+      <h1 class="containerRPH">Reports :</h1>
+      <br>
+      <div class="containerRP">
+        <h4> 1. Category Wise Recipe Summary </h4>
+        <br>
+      <div style="max-height: 300px; overflow-y: scroll;">
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Category Name</th>
+            <th scope="col">Number Of Recipes</th>
+          </tr>
+        </thead>
+        <% categoryWiseSummary.forEach(function(categoryWiseSummary, index){ %>
+        <tbody>
+          <tr>
+              <td><%= index +1 %></td>
+              <td><%= categoryWiseSummary._id %></td>
+              <td><%= categoryWiseSummary.count %></td>
+          </tr>
+        </tbody>
+        <% }) %>
+        </table>
+       </div>
+      </div>
+      <br>
+      <div class="containerRP">
+        <h4> 2. Recipe Wise Like Summary </h4>
+        <br>
+      <div style="max-height: 300px; overflow-y: scroll;">
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Recipe Name</th>
+            <th scope="col">Number Of Like</th>
+          </tr>
+        </thead>
+        <% recipeWiseLikeSummay.forEach(function(recipeWiseLikeSummay, index){ %>
+        <tbody>
+          <tr>
+              <td><%= index +1 %></td>
+              <td><%= recipeWiseLikeSummay._id %></td>
+              <td><%= recipeWiseLikeSummay.count %></td>
+          </tr>
+        </tbody>
+        <% }) %>
+        </table>
+       </div>
+      </div>
+      <br>
+      <div class="containerRP">
+        <h4> 3. Recipe Wise Comment Summary </h4>
+        <br>
+      <div style="max-height: 300px; overflow-y: scroll;">
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Recipe Name</th>
+            <th scope="col">Number Of Comments</th>
+          </tr>
+        </thead>
+        <% recipeWiseCommentSummay.forEach(function(recipeWiseCommentSummay, index){ %>
+        <tbody>
+          <tr>
+              <td><%= index +1 %></td>
+              <td><%= recipeWiseCommentSummay._id %></td>
+              <td><%= recipeWiseCommentSummay.count %></td>
+          </tr>
+        </tbody>
+        <% }) %>
+        </table>
+       </div>
+      </div>
+      <br>
+      <div class="containerRP">
+        <h4> 4. Users Detaild Report </h4>
+        <br>
+      <div style="max-height: 300px; overflow-y: scroll;">
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">User Name</th>
+            <th scope="col">User Conatact</th>
+            <th scope="col">User Email</th>
+            <th scope="col">Is E-mail Verified</th>
+          </tr>
+        </thead>
+        <% userDetailed.forEach(function(userDetailed, index){ %>
+        <tbody>
+          <tr>
+              <td><%= index +1 %></td>
+              <td><%= userDetailed.name %></td>
+              <td><%= userDetailed.mobile %></td>
+              <td><%= userDetailed.email %></td>
+              <% if(userDetailed.is_verified == 1){ %>
+              <td style="color: green;">YES</td><% }else{ %>
+                <td style="color: red;">NO</td><% } %>
+          </tr>
+        </tbody>
+        <% }) %>
+        </table>
+       </div>
+      </div>
+
+    </div>
+  </main>
+</body>
+
+</html>

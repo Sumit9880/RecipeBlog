@@ -1,0 +1,141 @@
+<% if(recipe !=null ) { %>
+
+  <div class="row">
+
+    <div class="col-12 col-md-4">
+      <img src="/uploads/<%- recipe.image %>" class="img-fluid sticky-top" style="top: 20px;" alt="<%- recipe.name %>"
+        loading="lazy">
+    </div>
+
+    <div class="col-12 col-md-8">
+      <div class="row">
+        <div class="col-12">
+          <h1><%- recipe.name %></h1>
+        </div>
+
+        <div class="col-12 mb-4"><i class="bi bi-tag"></i> <%- recipe.category %></div>
+        <div class="col-12" style="white-space: pre-line;">
+          <h4>Cooking Instructions</h4>
+          <%- recipe.description %>
+        </div>
+      </div>
+
+      <div class="row pt-4">
+        <div class="col-12">
+          <h4>Ingredients</h4>
+          <ul class="list-group list-group-flush">
+            <% recipe.ingredients.forEach(function(ingredients, index){ %>
+              <li class="list-group-item">
+                <%= ingredients %>
+              </li>
+              <% }) %>
+          </ul>
+        </div>
+      </div>
+      <ul></ul>
+      <div class="row">
+        <h5 class="col c_name">Recipe Created By : </h5>
+        <p class="col c_name"><%- recipe.userName %></p>
+      </div>
+      <ul></ul>
+
+      <div class="popup">
+        <header>
+          <span> Share </span>
+          <div class="close">x</div>
+        </header>
+        <div class="content">
+          <h5>Copy this link to Share the Recipe</h5>
+          <br>
+          <div class="field">
+            <input type="text" readonly width="400px" value="http://localhost:4000/sharedRecipe/<%= recipe._id %>">
+            <button>Copy</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row border">
+        <div class="col actionCenterLkSh">
+          <br>
+          <% if(likeDislike==1){%>
+            <form class="col c_name marginLike actionCenter" method="POST" action="/like/<%= recipe._id %>">
+              <button type="submit" class="btn btn-red">
+                <img src="/img/like.png" height="40px" alt="Like">
+              </button>
+            </form>
+            <% } else { %>
+              <form class="col c_name marginLike actionCenter" method="POST" action="/like/<%= recipe._id %>">
+                <button type="submit" class="btn btn-red">
+                  <img src="/img/dislike.png" height="40px" alt="Like">
+                </button>
+              </form>
+              <% } %>
+                <h4 class="row marginLike actionCenter">
+                  <%= likes %> Likes
+                </h4>
+        </div>
+        <div class="col-12 col-md-6 actionCenter" style="max-height: 170px; overflow-y: scroll;">
+          <form class="row " method="POST" action="/comment/<%= recipe._id %>">
+            <textarea name="text" id="text" class="form-control actionCenter"  rows="4"
+              placeholder="Add a Comment Here" required></textarea>
+            <button type="submit" class="btn btn-outline-primary">Comment</button>
+          </form>
+          <% comments.forEach(function(comment) { %>
+            <div class="row comment border commentsCenter">
+              <img class="col commentImage" src="/uploads/userImages/<%= comment.userImage %>" alt="User"> 
+              <h4 class="col-md-7 nameMargin nameColor"><%= comment.userName %> </h4>
+              <p class="timesize col nameMargin"><%= comment.createdAt.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })%></p>
+              <br>
+              <br>
+              <h5 class="row nameMargin commentPadding">
+                <%= comment.text %>
+              </h5>
+            </div>
+            <% }); %>
+        </div>
+        <div class="col actionCenterLkSh">
+          <br>
+          <button type="submit" class="btn marginShare view-modal"><img src="/img/share.png" height="40px" alt="Share"></button>
+          <h4 class="row marginLike actionCenter"> Share </h4>
+          <script>
+            const viewBtn = document.querySelector(".view-modal"),
+            popup = document.querySelector(".popup"),
+            close = popup.querySelector(".close"),
+            field = popup.querySelector(".field"),
+            input = field.querySelector("input"),
+            copy = field.querySelector("button");
+        
+            viewBtn.onclick = ()=>{
+              popup.classList.toggle("show");
+            }
+            close.onclick = ()=>{
+              viewBtn.click();
+            }
+        
+            copy.onclick = ()=>{
+              input.select(); //select input value
+              if(document.execCommand("copy")){ //if the selected text copy
+                field.classList.add("active");
+                copy.innerText = "Copied";
+                setTimeout(()=>{
+                  window.getSelection().removeAllRanges(); //remove selection from document
+                  field.classList.remove("active");
+                  copy.innerText = "Copy";
+                }, 3000);
+              }
+            }
+          </script>
+        </div>
+      </div>
+      <% if(update == 1){%>
+        <div class="row margin">
+          <a href="/upRecipe/<%= recipe._id %>" class="col btn btn-primary btn-green margin up">Update</a>
+          <a href="/delete-recipe/<%= recipe._id %>" method="DELETE"
+            class="col btn btn-primary btn-red margin del">Delete</a>
+        </div>
+        <%} %>
+    </div>
+  </div>
+  <% } else { %>
+    <p>No item found.</p>
+    <% } %>

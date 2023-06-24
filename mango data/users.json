@@ -1,0 +1,85 @@
+[{
+  "_id": {
+    "$oid": "645a7d26085d93e3b669551b"
+  },
+  "name": "Sumit D Ghatage",
+  "email": "sumitghatage2001@gmail.com",
+  "mobile": "8618749880",
+  "image": "16843247957941639568982264.jpg",
+  "password": "$2b$10$OC1TYmtbk6lkpZIiU5HRJu2/XnWPkQ8sSy8VjCtAWrvef3JQoic.i",
+  "is_admin": 1,
+  "is_verified": 1,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645bd89e90b13f7ca9dc434a"
+  },
+  "name": "Siddhi Nagmal",
+  "email": "siddhinagmal013@gmail.com",
+  "mobile": "8432364945",
+  "image": "1684322907394Link_to_MyASUS1669545810859.jpg",
+  "password": "$2b$10$DIUHI5Sda0F01Yi1nCulmuYYkztazXU9IVa0pFlYXEBteI2zRoXIy",
+  "is_admin": 1,
+  "is_verified": 1,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6460bf7df419487c588b1734"
+  },
+  "name": "Shashank Varale",
+  "email": "kunalvarale0@gmail.com",
+  "mobile": "7829456563",
+  "image": "1684680516883IMG-20230427-WA0024.jpg",
+  "password": "$2b$10$U6jhogRfWuuG7V5KTtmeW.ucVnUoSSQAjXZ/FTng6qLFEQnc119fm",
+  "is_admin": 0,
+  "is_verified": 1,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6462197cd5d9c24760f50fac"
+  },
+  "name": "pranali",
+  "email": "pranalisuvare04@gmail.com",
+  "mobile": "7666476612",
+  "image": "168415065293120221229965747.png",
+  "password": "$2b$10$RThqcfInWF8cSwUzWqdcm.5uZn/hQK0pjXRigyjtb8dvmg/9R47dC",
+  "is_admin": 0,
+  "is_verified": 1,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64632b35715f2a790d7d4fa0"
+  },
+  "name": "Darshan Kalli",
+  "email": "darshankalli2397@gmail.com",
+  "mobile": "7666832817",
+  "image": "16842207252641639568982264.jpg",
+  "password": "$2b$10$6Uq12wCNaVlc84W9Q0BczOh4qHPi.j8HgcyfBELBrmaARqpDBLJ0S",
+  "is_admin": 0,
+  "is_verified": 1,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6467063cb9440fd8c0ba9815"
+  },
+  "name": "Arjun Athawale",
+  "email": "arjunathawale08@gmail.com",
+  "mobile": "123456789",
+  "image": "1684473404748Time_Pass_SHOW_ID_1.png",
+  "password": "$2b$10$zwdzEuajEYvvgVR..QBhbe0QYrGW0j0lvdkX71Q2PssaQz4HmP0iC",
+  "is_admin": 0,
+  "is_verified": 1,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "646a2f67e4069d0b5252232a"
+  },
+  "name": "Sumit",
+  "email": "sumitghatage4@gmail.com",
+  "mobile": "+918618749880",
+  "image": "1684680551697IMG_20230402_120638.jpg",
+  "password": "$2b$10$LDnquzx4uVfEWTCvkIbFgOyMnX9aIcc6NW/Fa.kibbAHrb5ux6Iaq",
+  "is_admin": 0,
+  "is_verified": 1,
+  "__v": 0
+}]

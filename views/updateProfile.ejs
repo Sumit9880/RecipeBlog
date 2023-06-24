@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <div class="container">
+    <h1>Update Your Profile</h1>
+    <br>
+    <br>
+    <form action="/profileUpdate" method="POST" enctype="multipart/form-data">
+      <input type="text" class="form-control" value="<%- user.name %>" name="name" required>
+      <br>
+      <input type="email" class="form-control" value="<%- user.email %>" name="email" placeholder="Enter Email"
+        required>
+      <br>
+      <input type="text" class="form-control" value="<%- user.mobile %>" name="mno" placeholder="Mobile No" required>
+      <br>
+      <div>
+        <img src="/uploads/userImages/<%= user.image %>" style="top: 20px;" width="100px" alt="<%- user.name %>"
+          loading="lazy">
+      </div>
+      <div class="col-12">
+        <label for="image">Profile Image</label>
+        <input type="file" class="form-control" name="image" accept="image/*">
+      </div>
+      <br>
+      <br>
+      <input type="submit" class=" btn btn-outline-primary" value="Update profile">
+    </form>
+    <br>
+  </div>
+</body>
+
+</html>

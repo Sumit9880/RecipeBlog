@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <main>
+    <div class="complete">
+      <div class="row container">
+        <% if(user.is_admin == 1){ %>
+        <h1>Admin Dashboard</h1><% }else{ %>
+          <h1>User Profile</h1><% } %>
+          <br >
+          <br >
+          <div class="row">
+            <br>
+          </div>
+        <div class="col">
+          <img src="/uploads/userImages/<%= user.image %>" height="300px" alt="<%= user.name %>">
+        </div>
+        <br class="col">
+        <div class="col">
+          <h2 class="row">
+            <%= user.name %>
+          </h2>
+          <p class="row">Email : <%= user.email %>
+          </p>
+          <p class="row">Mobile No : <%= user.mobile %>
+          </p>
+          <br>
+          <br>
+          <br>
+          <a href="/profileUp" class="btn btn-primary col marginprof">Update Profile</a>
+          <a href="/logout" class="btn btn-secondary col marginprof">Logout</a>
+        </div>
+        <div class="row">
+          <br>
+        </div>
+      </div>
+      <% if(user.is_admin == 1){ %>
+        <br>
+      <div class="col container">
+        <a href="/reports" class="btn btn-primary">Reports</a>
+      </div>
+      <%}%>
+    </div>
+  </main>
+</body>
+
+</html>

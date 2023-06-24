@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <div class="complete">
+    <% if(typeof message !=='undefined' ){ %>
+      <h4 class="resCenter" style="color: green;">
+        <%= message %>
+      </h4>
+      <% } %>
+        <br>
+        <div class=" container">
+          <h1>Sign Up</h1>
+          <form class="form-group" action="/signup" method="POST" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Enter Your Name" required>
+            <br>
+            <input type="email" name="email" placeholder="Enter Email" required>
+            <br>
+            <input type="text" name="mno" placeholder="Mobile No" required>
+            <br>
+            <h6>Profile Picture</h6>
+            <input type="file" name="image" accept="image/*" required>
+            <br>
+            <input type="password" name="password" placeholder="Enter Password">
+            <br>
+            <br>
+            <div class="resLeft">
+            <a class="btn btn-outline-secondary" href="/">LogIn</a> <input class="btn btn-info" type="submit" value="  SignUp  ">
+          </div>
+          </form>
+          <br>
+        </div>
+  </div>
+</body>
+
+</html>
